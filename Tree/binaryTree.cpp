@@ -28,9 +28,9 @@ node *createTree(node *root)
         return NULL;
     }
 
-    cout << "Enter data for inserting in left of" << data << endl;
+    cout << "Enter data for inserting in left of " << data << endl;
     root->left = createTree(root->left);
-    cout << "Enter data for inserting in right of" << data << endl;
+    cout << "Enter data for inserting in right of " << data << endl;
     root->right = createTree(root->right);
     return root;
 }
