@@ -26,7 +26,6 @@ int main() {
 	vector<vector<int>> output;
 	vector<int>ans;
 	getPowerSet(output, ans, arr, 0);
-
 	cout << endl;
 
 	for(int i=0; i<output.size(); i++){
