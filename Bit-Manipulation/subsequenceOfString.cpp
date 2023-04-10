@@ -4,7 +4,6 @@ using namespace std;
 int main()
 {
     string s = "abc";
-
     vector<string> ans;
     int numOfSubsequences = pow(2, s.length()) - 1;
 
@@ -25,11 +24,6 @@ int main()
         }
         cout << temp <<' '; 
     }
-
-    // for (auto i : ans)
-    // {
-    //     cout << i << ' ';
-    // }
 
     return 0;
 }

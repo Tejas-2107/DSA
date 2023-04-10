@@ -1,35 +1,39 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void getPowerSet(vector<vector<int>> &output, vector<int>ans, vector<int>arr, int index){
-	
-	//base case
-	if(index >= arr.size()){
+void getPowerSet(vector<vector<int>> &output, vector<int> ans, vector<int> arr, int index)
+{
+
+	// base case
+	if (index >= arr.size())
+	{
 		output.push_back(ans);
 		return;
 	}
 
-	//exclude
-	getPowerSet(output, ans, arr, index+1);
+	// exclude
+	getPowerSet(output, ans, arr, index + 1);
 
-	//include
+	// include
 	int element = arr[index];
 	ans.push_back(element);
-	getPowerSet(output, ans, arr, index+1);
-
+	getPowerSet(output, ans, arr, index + 1);
 }
 
-int main() {
+int main()
+{
 	// your code goes here
 
-	vector<int>arr{1, 2, 3, 4, 5};
+	vector<int> arr{1, 2, 3, 4, 5};
 	vector<vector<int>> output;
-	vector<int>ans;
+	vector<int> ans;
 	getPowerSet(output, ans, arr, 0);
 	cout << endl;
 
-	for(int i=0; i<output.size(); i++){
-		for(int j=0; j<output[i].size(); i++){
+	for (int i = 0; i < output.size(); i++)
+	{
+		for (int j = 0; j < output[i].size(); i++)
+		{
 			cout << output[i][j] << ' ';
 		}
 
