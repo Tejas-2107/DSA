@@ -8,7 +8,6 @@ bool check(string s, int i, int j)
     {
         return true;
     }
-
     if (s[i] != s[j])
     {
         return false;
