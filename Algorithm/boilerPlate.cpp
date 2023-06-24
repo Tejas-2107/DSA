@@ -18,15 +18,22 @@ int main()
 {
 
     fast();
+    ll mod = 1e9 + 7;
     int t;
-    // cin >> t;
-    t = 1;
+    cin >> t;
+    // t = 1;
 
     while (t--)
     {
-        ll mod = 1e9 + 7;
-
-        vector<ll> v;
-        mll m;
+       int n;
+       //cin >> n;
+        vector<int>v;
+        // vector<ll> v;
+        // for(int i=0; i<n; ++i){
+        //     int x;
+        //     cin >> x;
+        //     v.pb(x);
+        // }
+       
     }
 }
