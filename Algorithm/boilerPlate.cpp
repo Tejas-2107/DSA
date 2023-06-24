@@ -11,7 +11,6 @@ typedef long long ll;
 #define mll map<long long, long long>
 #define mii map<int, int>
 #define mci map<char, int>
-#define mod (ll)1e9+7
 #define sp ' '
 using namespace std;
 
@@ -25,6 +24,7 @@ int main()
 
     while (t--)
     {
+        ll mod = 1e9 + 7;
 
         vector<ll> v;
         mll m;
