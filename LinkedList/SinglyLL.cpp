@@ -109,17 +109,33 @@ int main(){
 
 Linklist* node1 = new Linklist(10);
 Linklist* tail = node1;
+ 
+int number = 217;
 
-insert(tail, 95);
-insert(tail, 90);
-insert(tail, 11);
-inserATHead(tail,900);
-insert(tail, 1);
-inserAtPos(tail,3,3);
-// print(tail);
-deleteNode(tail,1);
+while(number){
+    int digit = number%10;
+    number /= 10;
+    Linklist* temp = new Linklist(digit);
+    tail->next = temp;
+    tail = temp;
+}
+node1 = node1->next;
+while(node1){
+    cout <<" nodeData: ";
+    cout << node1->data <<" ";
+    node1 = node1->next;
+}
 
-print(node1);
+// insert(tail, 95);
+// insert(tail, 90);
+// insert(tail, 11);
+// inserATHead(tail,900);
+// insert(tail, 1);
+// inserAtPos(tail,3,3);
+// // print(tail);
+// deleteNode(tail,1);
+
+// print(node1);
 
 
 }
