@@ -117,8 +117,8 @@ int main()
 {
 
     node *root = NULL;
-    //1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
-    
+    // 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
+
     root = createTree(root);
     levelOrder(root);
     return 0;
