@@ -5,11 +5,7 @@ int factorial(int n){
     if(n == 0){
         return 1;
     }
-
-    int smallerProbelm = factorial(n-1);
-    int bigProblem  = n*smallerProbelm;
-
-    return bigProblem;
+    return n*factorial(n-1);
 }
 
 int main(){
