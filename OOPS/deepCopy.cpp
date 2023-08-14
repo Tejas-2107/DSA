@@ -34,3 +34,37 @@ int main()
     t2.print();
     return 0;
 }
+
+// for static objects
+
+#include <iostream>
+using namespace std;
+
+class point {
+private:
+	int x, y;
+
+public:
+ 
+	void d(){
+	    cout << x <<" " << y << endl;
+	}
+	void set(int a, int b){
+	    x = a;
+	    y = b;
+	}
+};
+
+int main(void)
+{
+
+point a;
+a.set(10, 20);
+point b(a);
+a.d();
+b.d();  
+b.set(30,60);
+a.d();
+b.d();  
+	
+}
