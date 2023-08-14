@@ -2,18 +2,18 @@
 using namespace std;
 
 class Linklist
-{
-private:  
+{ 
 public:
 int data;
 Linklist* next;
 
+//constructor
 Linklist(int data){
     this->data = data;
     this->next = NULL;
 }
 
-//constructor
+//destructor
 ~Linklist(){
     int valus = this->data;
     if(this->next != NULL){
