@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-void selectionSort(int *arr, int size)
+void bubbleSort(int *arr, int size)
 {
     int n = size;
     bool isSwapping = false;
@@ -25,7 +25,7 @@ void selectionSort(int *arr, int size)
 int main()
 {
     int arr[] = {10, 1, 7, 14, 9};
-    selectionSort(arr, 5);
+    bubbleSort(arr, 5);
     for (int i = 0; i < 5; ++i)
     {
         cout << arr[i] << " ";
@@ -33,6 +33,6 @@ int main()
 }
 
 // Best case complexity = O(N) if already sorted
-//Worst and average complextiy = O(N^2) 
+// Worst and average complextiy = O(N^2)
 // Space complexity =  O(1)
 // In-Plcace Algo
