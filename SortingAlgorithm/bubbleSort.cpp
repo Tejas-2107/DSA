@@ -3,10 +3,10 @@ using namespace std;
 void bubbleSort(int *arr, int size)
 {
     int n = size;
-    bool isSwapping = false;
+    bool isSwapping;
     for (int i = 0; i < n; ++i)
     {
-        int minIndex = i;
+        isSwapping = false;
         for (int j = i; j < n - i; ++j)
         {
             if (arr[j] > arr[j + 1])
