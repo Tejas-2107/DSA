@@ -4,8 +4,8 @@ using namespace std;
 void merge(int *arr, int s, int e)
 {
     int mid = (s+e)/2;
-    int len1 = mid - s + 1;
-    int len2 = e - mid;
+    int len1 = mid - s + 1;//leftArrayLength
+    int len2 = e - mid;//rightArrayLength
     int *first = new int[len1];
     int *second = new int[len2];
 
@@ -45,6 +45,8 @@ void merge(int *arr, int s, int e)
     {
         arr[mainArrayIndex++] = second[index2++];
     }
+    delete []first;
+    delete []second;
 }
 
 void mergeSort(int *arr, int start, int end)
@@ -76,6 +78,6 @@ int main()
     }
 }
 
-// overall complexity = O(N) * O(N) = O(N*N) = O(N2)
-// Space complexity =  O(1)
-// In-Plcace Algo, Not a Stable
+// overall complexity = O(N log(N) in all case 
+// Space complexity =  O(N)
+// Not In-Plcace Algo, Stable Algo
