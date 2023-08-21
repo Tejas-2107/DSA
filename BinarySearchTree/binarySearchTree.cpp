@@ -16,6 +16,7 @@ public:
     }
 };
 
+// levelorder of bst
 void levelOrder(Node *root)
 {
     queue<Node *> q;
@@ -49,7 +50,15 @@ void levelOrder(Node *root)
         }
     }
 }
+//get min value 
+Node* minValue(Node* root){
+    if(root->left == NULL){
+        return root;
+    }
+    minValue(root->left);
+}
 
+// finding inorder predecessor and successor
 void findPredAndSucc(Node *root, Node *&pre, Node *&suc, int key)
 {
     {
@@ -72,7 +81,7 @@ void findPredAndSucc(Node *root, Node *&pre, Node *&suc, int key)
                 pre = temp;
             }
 
-            // // the minimum value in right subtree is successor
+            //  the minimum value in right subtree is successor
             if (root->right != NULL)
             {
                 Node *temp = root->right;
@@ -83,15 +92,69 @@ void findPredAndSucc(Node *root, Node *&pre, Node *&suc, int key)
                 suc = temp;
             }
         }
-        else if(root->data > key){
-            findPredAndSucc(root->left, pre, suc,key);
+        else if (root->data > key)
+        {
+            findPredAndSucc(root->left, pre, suc, key);
         }
-        else{
-            findPredAndSucc(root->right, pre, suc,key);
+        else
+        {
+            findPredAndSucc(root->right, pre, suc, key);
         }
     }
 }
 
+Node *deleteNode(Node *root, int target)
+{
+    if (root == NULL)
+    {
+        return root;
+    }
+    if (root->data == target)
+    {
+        // node with zero child
+        if (root->left == NULL and root->right == NULL)
+        {
+            delete root;
+            return NULL;
+        }
+        // node with one child
+        // left child
+        if (root->left != NULL and root->right == NULL)
+        {
+            Node *temp = root->left;
+            delete root;
+            return temp;
+        }
+        // right child
+        if (root->left == NULL and root->right != NULL)
+        {
+            Node *temp = root->right;
+            delete root;
+            return temp;
+        }
+        ////node with two child
+        if (root->left != NULL and root->right != NULL)
+        {
+            int inorderSuceessor = minValue(root->right)->data;
+            root->data = inorderSuceessor;
+            root->right = deleteNode(root->right, inorderSuceessor);
+            return root;
+        }
+    }
+    else if (root->data > target)
+    {
+        root->left = deleteNode(root->left, target);
+        return root;
+    }
+    else
+    {
+        root->right = deleteNode(root->right, target);
+        return root;
+    }
+    return root;
+}
+
+// insert values in bst
 Node *inserIntoBST(Node *root, int d)
 {
     // base case
@@ -112,6 +175,8 @@ Node *inserIntoBST(Node *root, int d)
     }
     return root;
 }
+
+// user input for bst
 void takeInput(Node *&root)
 {
     int data;
@@ -129,31 +194,34 @@ int main()
     Node *root = NULL;
     cout << "Enter data to create BST" << endl;
     takeInput(root);
-    // cout << "Printing BST" << endl;
-    // levelOrder(root);
+    cout << "Printing BST" << endl;
+    levelOrder(root);
     cout << endl;
 
-    Node *pre = NULL, *suc = NULL;
-    int key = 40;
-    findPredAndSucc(root, pre, suc,key);
+    // Node *pre = NULL, *suc = NULL;
+    // int key = 40;
+    // findPredAndSucc(root, pre, suc,key);
 
-    if (pre != NULL)
-    {
-        cout << "Predecessor is " << pre->data << endl;
-    }
-    else
-    {
-        cout << "No Predecessor" << endl;
-    }
+    // if (pre != NULL)
+    // {
+    //     cout << "Predecessor is " << pre->data << endl;
+    // }
+    // else
+    // {
+    //     cout << "No Predecessor" << endl;
+    // }
 
-    if (suc != NULL)
-    {
-        cout << "Successor is " << suc->data << endl;
-    }
-    else
-    {
-        cout << "No Successor" << endl;
-    }
-
+    // if (suc != NULL)
+    // {
+    //     cout << "Successor is " << suc->data << endl;
+    // }
+    // else
+    // {
+    //     cout << "No Successor" << endl;
+    // }
+    cout << endl;
+    cout <<"Aftet Deletion" << endl;
+    Node* afterDelete = deleteNode(root, 30);
+    levelOrder(root);
     return 0;
 }
