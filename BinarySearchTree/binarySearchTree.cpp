@@ -94,10 +94,12 @@ void findPredAndSucc(Node *root, Node *&pre, Node *&suc, int key)
         }
         else if (root->data > key)
         {
+            suc = root;
             findPredAndSucc(root->left, pre, suc, key);
         }
         else
         {
+            pre = root;
             findPredAndSucc(root->right, pre, suc, key);
         }
     }
