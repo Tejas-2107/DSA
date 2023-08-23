@@ -5,7 +5,8 @@
         "span": "cpp",
         "vector": "cpp",
         "ostream": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "c]": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
