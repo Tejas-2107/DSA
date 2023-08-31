@@ -48,3 +48,41 @@ int height(struct Node *node)
 
     return heightOfTree;
 }
+
+// iterative using level order
+
+int height(struct Node *node)
+{
+    int ans = 0;
+    queue<Node *> q;
+    q.push(node);
+    q.push(NULL);
+
+    while (!q.empty())
+    {
+
+        Node *frontNode = q.front();
+        q.pop();
+
+        if (frontNode == NULL)
+        {
+            ++ans;
+            if (!q.empty())
+            {
+                q.push(NULL);
+            }
+        }
+        else
+        {
+            if (frontNode->left)
+            {
+                q.push(frontNode->left);
+            }
+            if (frontNode->right)
+            {
+                q.push(frontNode->right);
+            }
+        }
+    }
+    return ans;
+}
