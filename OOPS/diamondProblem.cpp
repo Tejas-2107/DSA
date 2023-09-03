@@ -3,17 +3,28 @@ using namespace std;
 
 class A
 {
-public:
+    public:
     int x = 0;
-    A(){
+    A()
+    {
         cout << "A constructor called" << endl;
     }
 };
-class B : virtual public A
-{
+class B : public A
+{  
+    public:
+    B()
+    {
+        cout << "B constructor called" << endl;
+    }
 };
-class C : virtual public A
+class C : public A
 {
+    public:
+    C()
+    {
+        cout << "C constructor called" << endl;
+    }
 };
 class D : public B, public C
 {
@@ -22,6 +33,6 @@ class D : public B, public C
 int main()
 {
     D d;
-    cout << d.x;
+    // cout << d.x;
     return 0;
 }
