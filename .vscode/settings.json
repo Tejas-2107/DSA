@@ -6,7 +6,12 @@
         "vector": "cpp",
         "ostream": "cpp",
         "valarray": "cpp",
-        "c]": "cpp"
+        "c]": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "string_view": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
