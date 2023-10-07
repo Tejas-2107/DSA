@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-typedef long long ll;
+#define int long long
 #define ho cout << "YES" << endl;
 #define nahi cout << "NO" << endl;
 #define newl cout << endl;
@@ -14,11 +14,11 @@ typedef long long ll;
 #define sp ' '
 using namespace std;
 
-int main()
+int32_t main()
 {
 
     fast();
-    ll mod = 1e9 + 7;
+    int mod = 1e9 + 7;
     int t;
     cin >> t;
     // t = 1;

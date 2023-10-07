@@ -11,7 +11,8 @@
         "deque": "cpp",
         "forward_list": "cpp",
         "list": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "complex": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
