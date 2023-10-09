@@ -54,3 +54,25 @@ public:
         return dp[n];
     }
 };
+
+// spcae o(1)
+
+class Solution
+{
+public:
+    long long mod = 1e9 + 7;
+
+    int nthFibonacci(int n)
+    {
+        // code here
+        int prev1 = 0;
+        int prev2 = 1;
+        for (int i = 2; i <= n; ++i)
+        {
+            int nFibo = (prev1 + prev2) % mod;
+            prev1 = prev2;
+            prev2 = nFibo;
+        }
+        return prev2;
+    }
+};
