@@ -12,7 +12,8 @@
         "forward_list": "cpp",
         "list": "cpp",
         "string_view": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "string": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
