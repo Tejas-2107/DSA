@@ -10,7 +10,7 @@ class A
         cout << "A constructor called" << endl;
     }
 };
-class B : public A
+class B : virtual public A
 {  
     public:
     B()
@@ -18,7 +18,7 @@ class B : public A
         cout << "B constructor called" << endl;
     }
 };
-class C : public A
+class C : virtual public A
 {
     public:
     C()
