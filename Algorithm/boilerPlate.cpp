@@ -17,32 +17,25 @@ using namespace std;
 int32_t main()
 {
 
-    // // fast();
-    // // int mod = 1e9 + 7;
-    // // int t;
-    // // cin >> t;
-    // // // t = 1;
-
-    // // while (t--)
-    // // {
-    //    int n;
-    //    //cin >> n;
-    //     vector<int>v;
-    //     // vector<ll> v;
-    //     // for(int i=0; i<n; ++i){
-    //     //     int x;
-    //     //     cin >> x;
-    //     //     v.pb(x);
-    //     // }
+    fast();
+    int mod = 1e9 + 7;
+    int t;
+    cin >> t;
+    // t = 1;
+    while (t--)
+    {
+       int n;
+       //cin >> n;
+        vector<int>v;
+        // vector<ll> v;
+        // for(int i=0; i<n; ++i){
+        //     int x;
+        //     cin >> x;
+        //     v.pb(x);
+        // }
        
-    // }
+    }
 
-    int a = 49, b = 48;
-    int c = a|b;
-    int x = a^b;
-    cout << "or " << c;
-    newl
-    cout << "xor " << x;
-    newl
-    cout << c*x;
+   
 }
+
