@@ -13,6 +13,7 @@ int main()
             throw string("Y is 0");
         if (x + y < 0.0)
             throw(x + y);
+        cout << "Inside try block\n";
     }
     catch (int e1)
     {
