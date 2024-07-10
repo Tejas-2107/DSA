@@ -23,6 +23,7 @@ public:
 int main()
 {
     Test t1(10);
+    // default copy constructor always create a shallow copy
     Test t2(t1);
     t2.set(20);
     t1.print();

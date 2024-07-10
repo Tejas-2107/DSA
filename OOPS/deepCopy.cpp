@@ -28,6 +28,7 @@ public:
 int main()
 {
     Test t1(10);
+    // user defined  copy constructor always create a deep copy
     Test t2(t1);
     t2.set(20);
     t1.print();
