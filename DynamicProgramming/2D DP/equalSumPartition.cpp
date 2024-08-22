@@ -40,7 +40,6 @@ public:
 };
 
 // tabulation bottom up
-
 class Solution
 {
 public:
