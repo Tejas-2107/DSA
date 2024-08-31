@@ -6,7 +6,7 @@ int solve(TreeNode<int> *root, int k, int &counter)
     }
     int leftAns = solve(root->left, k, counter);
 
-    // left
+    // left we got the answer
     if (leftAns != -1)
     {
         return leftAns;
