@@ -5,10 +5,8 @@ void insert(stack<int> &s, int num)
         s.push(num);
         return;
     }
-
     int top = s.top();
     s.pop();
-
     insert(s, num);
     s.push(top);
 }

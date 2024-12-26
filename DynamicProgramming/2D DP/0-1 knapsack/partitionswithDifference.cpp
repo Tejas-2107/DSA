@@ -31,8 +31,8 @@ public:
         int sum = 0;
         for (auto i : arr)
             sum += i;
-
-        if (sum - d < 0 || (sum - d) % 2)
+            //s1+s2=sum
+        if (sum - d < 0)
         {
             return 0;
         }
