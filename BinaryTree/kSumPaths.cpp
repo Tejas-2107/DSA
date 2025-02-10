@@ -1,28 +1,26 @@
-void solve(Node *root, int k, int &count, vector<int> &path)
+class Solution
 {
-    if (root == NULL)
+public:
+    void count(Node *root, int k, int &ans, int curr, map<int, int> &m)
     {
-        return;
+        if (root == NULL)
+            return;
+        // take root
+        curr += root->data;
+        if (curr == k)
+            ++ans;
+        ans += m[curr - k];
+        ++m[curr];
+        count(root->left, k, ans, curr, m);
+        count(root->right, k, ans, curr, m);
+        --m[curr];
     }
-    path.push_back(root->data);
-    solve(root->left, k, count, path);
-    solve(root->right, k, count, path);
-
-    int size = path.size();
-    int sum = 0;
-    for (int i = size - 1; i >= 0; --i)
+    int sumK(Node *root, int k)
     {
-        sum += path[i];
-        if (sum == k)
-            ++count;
+        // code here
+        int ans = 0, curr = 0;
+        map<int, int> m;
+        count(root, k, ans, curr, m);
+        return ans;
     }
-    path.pop_back();
-}
-int sumK(Node *root, int k)
-{
-    // code here
-    vector<int> path;
-    int count = 0;
-    solve(root, k, count, path);
-    return count;
-}
+};
