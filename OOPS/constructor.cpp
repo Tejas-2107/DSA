@@ -1,25 +1,58 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-class Print{
-    private:
-    
-    public:
+class Print
+{
+private:
+public:
     int x, y;
-    Print(int x2, int y2){
+    string name;
+    // default constructor
+    Print()
+    {
+        cout << "default construcotr is called" << endl;
+    }
+    // Parameterized Constructor
+    Print(int x2, int y2)
+    {
         x = x2;
         y = y2;
     }
-    void print(){
+    Print(int );//print (int x) this is also works
+
+    // Member initialization list
+    // Print(int v1, double v2) : x(v1) , y(v2){}
+
+    // copy construtor
+    Print(const Print &toBeCopied){
+        cout << "calling user definfed copy construcor" << endl;
+        x=toBeCopied.x;
+        y=toBeCopied.y;
+    }
+    void print()
+    {
         cout << x << " " << y << endl;
     }
-    ~Print(){
+    ~Print()
+    {
         cout << "Destructor Called" << endl;
     }
 };
-int main(){
-    Print p1(10,20);
-    Print p2(p1);
-    p1.x = 30;
-    p1.print();
-    p2.print();
+Print::Print(int x){
+    cout << x << endl;
+}
+
+int main()
+{
+    Print p;
+    p.x=10;p.y=20;
+    Print p1;
+    p1=p;// assignement operator
+    Print p2(p);//calling copy constructor
+   
+
+    
+    cout << p1.x << ' ' << p1.y << endl;
+    p.x=20;
+    cout << p1.x << ' ' << p1.y << endl;
+    cout << p.x << ' ' << p.y << endl;
 }
