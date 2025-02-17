@@ -48,11 +48,12 @@ int main()
     Print p1;
     p1=p;// assignement operator
     Print p2(p);//calling copy constructor
-   
-
+    Print *p3=new Print(80,90);
+    cout << p3->x << ' ' << p3->y <<endl;
     
-    cout << p1.x << ' ' << p1.y << endl;
-    p.x=20;
-    cout << p1.x << ' ' << p1.y << endl;
-    cout << p.x << ' ' << p.y << endl;
+    // cout << p1.x << ' ' << p1.y << endl;
+    // p.x=20;
+    // cout << p1.x << ' ' << p1.y << endl;
+    // cout << p.x << ' ' << p.y << endl;
+    return 0;
 }
