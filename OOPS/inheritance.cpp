@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// C++ program to illustrate the single inheritance
 class Person
 {
 public:
@@ -36,3 +37,4 @@ int main()
     Student stu("Rahul", 1001, 88);
     cout << stu.name << endl;
 }
+

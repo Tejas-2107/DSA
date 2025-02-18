@@ -15,7 +15,10 @@
         "complex": "cpp",
         "string": "cpp",
         "cmath": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "any": "cpp",
+        "ranges": "cpp",
+        "regex": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
