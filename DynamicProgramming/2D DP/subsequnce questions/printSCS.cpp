@@ -1,3 +1,4 @@
+//shortestCommonSupersequence nothing but the addition of the characters of the two strings such that the common characters are added only once.
 string shortestCommonSupersequence(string text1, string text2)
 {
     vector<vector<int>> dp(text1.size() + 1,
@@ -43,6 +44,8 @@ string shortestCommonSupersequence(string text1, string text2)
             }
         }
     }
+    //push remaining characters to make supersequence
+    
     while (i > 0)
     {
         scs.push_back(text1[i - 1]);
